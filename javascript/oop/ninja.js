@@ -42,6 +42,8 @@ class Sensei extends Ninja {
         this.wisdom = 10;
     }
 
+    //this is a test.
+
     speakWisdom(){
         super.drinkSake();
         console.log("What one programmer can do in one month, two programmers can do in two months.");
