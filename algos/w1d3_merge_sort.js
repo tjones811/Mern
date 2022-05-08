@@ -90,4 +90,18 @@ const expectedSort = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
  * @param {Array<number>} nums
  * @returns {Array<number>} A New sorted array.
  */
-function mergeSort(nums) {}
+function mergeSort(nums) {
+  console.log(nums)
+  //if the array length is greater than 1, we can split it in half
+  if(nums.length >1){ 
+      let mid = Math.floor(nums.length/2);
+      let lefthalf = nums.slice(0,mid);
+      let righthalf = nums.slice(mid)
+      let left = mergeSort(lefthalf)
+      let right = mergeSort(righthalf)
+      return merge(left, right)
+
+  }else{
+      return nums
+  }
+}
