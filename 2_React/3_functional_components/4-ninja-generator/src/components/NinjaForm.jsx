@@ -21,7 +21,7 @@ const NinjaForm = ()=>{
         //create a pet object (python dictionary) also called hashmap
         let pet = {name,proPicUrl,color}
 
-        //use th e setPetList settr to update the petList array to have the pet object inside of it
+        //use the setPetList setter to update the petList array to have the pet object inside of it
         setPetList([...petList,pet])
 
 
@@ -60,7 +60,7 @@ const NinjaForm = ()=>{
                 return ( 
                             
                             
-                                <div className="pet-card" style ={{backgroundColor:petObj.color}} >
+                                <div className="pet-card" style ={{backgroundColor:petObj.color}}  >
                                     <h1>{petObj.name}</h1>
                                     <p>Belt color: {petObj.color}</p>
                                     <img src={petObj.proPicUrl} alt="" width="250px" height="250px" />
