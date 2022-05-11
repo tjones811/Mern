@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.pet-card{
+  border: 1px solid green;
+
+}
+
+.pet-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
