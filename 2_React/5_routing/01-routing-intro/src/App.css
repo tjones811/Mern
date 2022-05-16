@@ -1,0 +1,19 @@
+.App{
+  min-height:100vh;
+  background-color:lightgreen
+}
+
+.navbar{
+  background-color: blue;
+  display: flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 1em;
+}
+
+#nav-links{
+  display: flex;
+  gap: 1em;
+  list-style-type: none;
+
+}
