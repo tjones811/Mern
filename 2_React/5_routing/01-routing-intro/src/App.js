@@ -3,7 +3,7 @@ import './App.css';
 import {
   BrowserRouter,//this will enable routing for the application, otherwise the routing features will not work
   Switch, // Switch lets us detrmine  which components/elements need to show up onlyy  at certain routes
-  Route, // Route llets us specify thhe route url address for an element to show up in
+  Route, // Route lets us specify thhe route url address for an element to show up in
   Link // Link is just like an a href(anchor) but will not reload the page
 } from "react-router-dom";
 import About from './components/About'
