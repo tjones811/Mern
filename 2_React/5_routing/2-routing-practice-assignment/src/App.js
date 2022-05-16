@@ -9,18 +9,16 @@ function App() {
     <div className="App">
       <h1>Routing Practice</h1>
       <Switch>
-        <Route exact path= "/home">
-          <Page></Page>
-        </Route>
-        <Route exact path= "/:number">
-          <Page></Page>
-        </Route>
+        
+        
         <Route exact path= "/:word">
           <Page></Page>
         </Route>
         <Route exact path= "/:word/:color1/:color2">
           <Page></Page>
         </Route>
+
+        
       </Switch>
     </div>
     </BrowserRouter>
