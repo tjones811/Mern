@@ -24,11 +24,11 @@ const Form = ()=>{
                     <select className="form-select" onChange={(e)=>{setCategory(e.target.value)}} defaultValue={'default'}>
                         <option value="default" disabled>Please select a category</option>
                         <option value="people">People</option>
-                        <option value="films">Films</option>
                         <option value="planets">Planets</option>
-                        <option value="species">Species</option>
-                        <option value="vehicles">Vehicles</option>
-                        <option value="starships">Starships</option>
+                        {/* <option value="films">Films</option> */}
+                        {/* <option value="species">Species</option> */}
+                        {/* <option value="vehicles">Vehicles</option> */}
+                        {/* <option value="starships">Starships</option> */}
                         
                     </select>
                 </div>
