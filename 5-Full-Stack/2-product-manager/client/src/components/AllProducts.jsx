@@ -2,8 +2,7 @@ import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 import{Link} from 'react-router-dom'
 
-const AllProducts = () =>{
-
+const AllProducts = (props) =>{
 
     const [allProducts,setAllProducts] = useState([]);
     
@@ -16,8 +15,8 @@ const AllProducts = () =>{
             setAllProducts(res.data.results)
         })
         .catch(err=>{
-            console.error("error",err)
-        })
+            console.log("error",err)
+        },[deleteToggle,props.newProductToggle])
     })
 
     const deleteProduct = (_id)=>{
@@ -40,10 +39,13 @@ const AllProducts = () =>{
                             return(
                                 <div key = {productObj._id} className ="card mx-auto mb-2" style={{width: '18rem'}}>
                                 <div className ="card-body">
+                                    
                                     <h1 className ="card-title"><Link to={`/products/${productObj._id}`}>{productObj.title}</Link></h1>
                                     
                                     <p><Link to={`/edit/${productObj._id}`} className="btn btn-info">Edit {productObj.title}</Link></p>
+                                    
                                     <button onClick={(e)=>{deleteProduct(productObj._id)}} className="btn btn-danger">Delete {productObj.title}</button>
+                                
                                 </div>
                             </div>
 

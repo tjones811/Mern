@@ -1,4 +1,3 @@
-
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
 
@@ -27,7 +26,7 @@ const NewProductForm = (props)=>{
                 setPrice("");
                 setDescription("");
 
-                props.setNewProductToggle(!props.NewProductToggle)
+                props.setNewProductToggle(!props.newProductToggle)
 
 
             }
@@ -61,7 +60,7 @@ const NewProductForm = (props)=>{
             </div>
             <hr />
         </>
-    )
-}
+    );
+};
 
 export default NewProductForm;

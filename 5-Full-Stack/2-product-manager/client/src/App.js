@@ -9,6 +9,7 @@ import{
 import NewProductForm from './components/NewProductForm';
 import AllProducts from './components/AllProducts';
 import OneProduct from './components/OneProduct';
+import EditProductForm from './components/EditProductForm';
 
 import {useState} from 'react';
 
@@ -25,13 +26,16 @@ function App() {
           <Route exact path="/">
             <NewProductForm newProductToggle={newProductToggle} setNewProductToggle={setNewProductToggle}></NewProductForm>
             <AllProducts newProductToggle={newProductToggle}></AllProducts>
+            
           </Route>
           <Route exact path="/products/:_id">
             <OneProduct></OneProduct>
           </Route>
+          <Route exact path = "/edit/:_id">
+            <EditProductForm></EditProductForm>
+          </Route>
         </Switch>
       </BrowserRouter>
-
     </div>
   );
 }
