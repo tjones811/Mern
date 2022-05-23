@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react';
 import axios from 'axios';
+import {useHistory} from "react-router-dom"
+
 
 const NewNinjaForm = (props) => {
 
@@ -10,6 +12,9 @@ const NewNinjaForm = (props) => {
 
     //state variables to store validation errors
     let [errors,setErrors] = useState({})
+
+    const history = useHistory();//initialize history so we can redirect using history.push()
+
 
 
 
@@ -36,6 +41,8 @@ const NewNinjaForm = (props) => {
                 setIsVeteran(false);
 
                 props.setNewNinjaToggle(!props.newNinjaToggle)
+
+                history.push("/");//redirect after submmitting the form and successfully creating a ninja
             }
         })
         .catch(err=>console.log("errr",err))

@@ -21,12 +21,14 @@ function App() {
     <BrowserRouter>
       <div className="App container">
         <h1>Wall of Ninjas</h1>
-
+        <Link to = "/new">Add new Ninja</Link>
         <Switch>
           <Route exact path="/">
-            <NewNinjaForm newNinjaToggle={newNinjaToggle} setNewNinjaToggle= {setNewNinjaToggle}></NewNinjaForm>
-            <hr/>
             <AllNinjas newNinjaToggle={newNinjaToggle}></AllNinjas>
+          </Route>
+          <Route exact path = "/new">
+          <NewNinjaForm newNinjaToggle={newNinjaToggle} setNewNinjaToggle= {setNewNinjaToggle}></NewNinjaForm>
+            
           </Route>
           <Route exact path="/ninjas/:_id">
             <OneNinja></OneNinja>

@@ -56,6 +56,7 @@ const EditProductForm = () =>{
                         <div className="form-group">
                             <label htmlFor="">Title:</label>
                             <input type="text" name="title" onChange={changeHandler}  className="form-control" value={productInfo.title}  />
+                            
                         </div>
                         <div className="form-group">
                             <label htmlFor="">Price:</label>

@@ -60,7 +60,7 @@ const NewProductForm = (props)=>{
             </div>
             <hr />
         </>
-    );
-};
+    )
+}
 
 export default NewProductForm;
