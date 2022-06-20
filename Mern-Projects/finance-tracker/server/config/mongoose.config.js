@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');//importing mongoose
-const db_name = "financeTracker_db";
+const db_name = "financeTracker2_db";
 
 //mongoose connection here
 mongoose.connect(`mongodb+srv://root:root@clustermay.8fjv7.mongodb.net/${db_name}?retryWrites=true&w=majority`, {

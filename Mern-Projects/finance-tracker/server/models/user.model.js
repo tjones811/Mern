@@ -23,6 +23,10 @@ const UserSchema = new mongoose.Schema({
         required: [true,"Password is required"],
         minLength: [8,"Password must be at least 8 characters"],
     },
+    transactions: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Transaction"
+    }],
 },{timestamps:true});
 
 // create a virtual field called "confirm" that is used just to validate the password matches confirm--> the getter and settr above are just creating temporary fields for _confirm
@@ -38,7 +42,7 @@ UserSchema.pre('validate', function(next) {
     next();//after the above process is done, go to the usual next step
 });
 
-//before  (pre) saving the user to the db (this means we passed the  validations), hsh the user password(encrypt it)
+//before  (pre) saving the user to the db (this means we passed the  validations), hAsh the user password(encrypt it)
 UserSchema.pre('save', function(next) {
     bcrypt.hash(this.password, 10)
         .then(hash => {

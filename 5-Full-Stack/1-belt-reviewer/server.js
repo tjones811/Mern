@@ -19,5 +19,6 @@ require('./server/routes/ninja.routes')(app);
 
 
 
+
 //THIS LINE NEEDS TO BE AT THE BOTTOM OF THE FILE
 app.listen(port,()=>console.log(`Listening on port ${port}`));
